@@ -16,6 +16,7 @@ Array.prototype.equals = function (array) {
   }
     return true;
 };
+Object.defineProperty(Array.prototype, "equals", {enumerable: false});
 
 
 var string = 'string';
@@ -30,3 +31,5 @@ console.log('expect true: ' + array1.equals(array1));
 console.log('expect false: ' + array2.equals(array3));
 console.log('expect true: ' + array3.equals(array4));
 console.log('expect false: ' + array2.equals(null));
+
+// console.log(Object.getOwnPropertyNames(string));
